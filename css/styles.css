@@ -413,8 +413,7 @@ margin-bottom: 50px;
   margin-right: 30px;
 }
 .our-customer-title {
-font-family: var(--main-font)
-font-style: normal;
+font-family: var(--main-font);
 font-weight: 700;
 font-size: 36px;
 line-height: 1.16;
@@ -484,7 +483,7 @@ border-color: var(--accent-color);
 .contact-footer-mail {
 font-weight: 400;
 font-size: 14px;
-line-height: 1,714;
+line-height: 1.714;
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
 }
@@ -589,7 +588,6 @@ box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   height: 404px;
   margin-right: 30px;
   margin-bottom: 30px;
-  
 }
 
 .portfolio-list-item:nth-child(3n) {
@@ -627,7 +625,7 @@ color: #FFFFFF;
 }
 .portfolio-list-link {
   display: block;
-  position: relative;
+  
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -635,24 +633,34 @@ color: #FFFFFF;
 .portfolio-list-link:focus {
  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.overlay {
-  display: block;
-  position: absolute;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);}
-
+.overbox {
+  position: relative;
+  overflow: hidden;
+}
 .overlay-text {
+display: block;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(33, 150, 243, 0.9);
+padding: 63px 24px;
+
 font-family: var(--main-font);
 font-weight: 400;
 font-size: 18px;
-line-height: 2;
+line-height: 1.6;
 letter-spacing: 0.03em;
 color: #FFFFFF;
+
+position: absolute;
+transform: translateY(100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.portfolio-list-link:hover .overlay-text {
+  transform: translateY(0)
+}
+
 
 /* ===============end portfolio page ===============*/
 
